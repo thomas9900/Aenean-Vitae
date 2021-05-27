@@ -13,8 +13,11 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        // Bootstrap icons
-        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet', type='text/css')
+        // Fontawesome icons
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        //- // Bootstrap icons
+        //- link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet', type='text/css')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', rel='stylesheet', type='text/css')
@@ -24,12 +27,6 @@ html(lang='en')
 
     body
 
-        // Navigation
-        nav.navbar.navbar-light.bg-light.static-top
-            .container
-                a.navbar-brand(href='#!') Start Bootstrap
-                a.btn.btn-primary(href='#signup') Sign Up
-
         // Masthead
         header.masthead
             .container.position-relative
@@ -37,121 +34,82 @@ html(lang='en')
                     .col-xl-6
                         .text-center.text-white
                             // Page heading
-                            h1.mb-5 Generate more leads with a professional landing page!
-                            // Signup form
-                            form
-                                .input-group.input-group-lg
-                                    input.form-control(type='text', placeholder='Enter your email...', aria-label='Enter your email...', aria-describedby='button-submit')
-                                    button#button-submit.btn.btn-primary(type='button') Sign up!
-
+                            i.fas.fa-university
+                            h1.mb-5 Aenean Vitae
+                            // Paragraph
+                            
+                            p.lead #[i.fas.fa-quote-left] Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Phasellus sagittis elit in leo iaculis <br/> euismod. Sed aliquam aliquet lectus, eget <br/>placerat est vestibulum eget.
+                            
         // Icons Grid
-        section.features-icons.bg-light.text-center
+        section.features-icons.text-center
             .container
                 .row
                     .col-lg-4
                         .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
                             .features-icons-icon.d-flex
-                                i.bi-window.m-auto.text-primary
-                            h3 Fully Responsive
-                            p.lead.mb-0 This theme will look great on any device, no matter the size!
+                                i.fas.fa-cubes.m-auto.text-primary
+                            a(href='#').h5 Pakett 1
+                            p.my-2 Integer faucibus blandit eros, id <br/> iaculis erat
+                            h3.text-primary.py-2 99 €
+                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
                     .col-lg-4
                         .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
                             .features-icons-icon.d-flex
-                                i.bi-layers.m-auto.text-primary
-                            h3 Bootstrap 5 Ready
-                            p.lead.mb-0 Featuring the latest build of the new Bootstrap 5 framework!
+                                i.fas.fa-store.m-auto.text-primary
+                            a(href='#').h5 Pakett 2
+                            p.my-2 Orci varius natoque penatibus <br/> et magnis dis parturient montes
+                            h3.text-primary.py-2 129 €
+                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
                     .col-lg-4
                         .features-icons-item.mx-auto.mb-0.mb-lg-3
                             .features-icons-icon.d-flex
-                                i.bi-terminal.m-auto.text-primary
-                            h3 Easy to Use
-                            p.lead.mb-0 Ready to use with your own content, or customize the source files!
+                                i.fas.fa-globe-africa.m-auto.text-primary
+                            a(href='#').h5 Pakett 3
+                            p.my-2 Vivamus vestibulum lacus sit <br/> amet mi pulvinar ornare
+                            h3.text-primary.py-2 199 €
+                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
 
-        // Image Showcases
-        section.showcase
-            .container-fluid.p-0
-                .row.g-0
-                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-1.jpg');")
-                    .col-lg-6.order-lg-1.my-auto.showcase-text
-                        h2 Fully Responsive Design
-                        p.lead.mb-0
-                            | When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!
-                .row.g-0
-                    .col-lg-6.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-2.jpg');")
-                    .col-lg-6.my-auto.showcase-text
-                        h2 Updated For Bootstrap 5
-                        p.lead.mb-0
-                            | Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!
-                .row.g-0
-                    .col-lg-6.order-lg-2.text-white.showcase-img(style="background-image: url('assets/img/bg-showcase-3.jpg');")
-                    .col-lg-6.order-lg-1.my-auto.showcase-text
-                        h2 Easy to Use & Customize
-                        p.lead.mb-0
-                            | Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!
-
-        // Testimonials
-        section.testimonials.text-center.bg-light
-            .container
-                h2.mb-5 What people are saying...
-                .row
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-1.jpg', alt='...')
-                            h5 Margaret E.
-                            p.font-weight-light.mb-0 "This is fantastic! Thanks so much guys!"
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-2.jpg', alt='...')
-                            h5 Fred S.
-                            p.font-weight-light.mb-0
-                                | "Bootstrap is amazing. I've been using it to create lots of super nice landing pages."
-                    .col-lg-4
-                        .testimonial-item.mx-auto.mb-5.mb-lg-0
-                            img.img-fluid.rounded-circle.mb-3(src='assets/img/testimonials-3.jpg', alt='...')
-                            h5 Sarah W.
-                            p.font-weight-light.mb-0 "Thanks so much for making these free resources available to us!"
-
-        // Call to Action
-        section#signup.call-to-action.text-white.text-center
-            .container.position-relative
-                .row.justify-content-center
-                    .col-xl-6
-                        h2.mb-4 Ready to get started? Sign up now!
-                        // Signup form
-                        form
-                            .input-group.input-group-lg
-                                input.form-control(type='text', placeholder='Enter your email...', aria-label='Enter your email...', aria-describedby='button-submit')
-                                button#button-submit.btn.btn-primary(type='button') Sign up!
+        // Paragraph Section
+        section.paragraphs
+            .container.py-5
+                p Suspendisse ut elit vestibulum, finibus elit maximus, ultricies tortor. Praesent convallis lobortis magna, sit amet eleifend elit tincidunt sit amet. Duis bibendum tortor at felis convallis mollis. Aenean massa libero, dapibus vel euismod ut, faucibus sed nisl. Nulla posuere nulla eu leo auctor dignissim. Cras lectus risus, euismod eu commodo in, viverra consequat ante. Etiam a nisl laoreet, fermentum felis sit amet, semper turpis. 
+                p Ut fringilla mollis sapien et scelerisque. Quisque at arcu nibh. Nam rutrum vitae sem a elementum. Mauris tempor nec nisl a efficitur. Nullam malesuada justo ut enim fermentum mollis. Vivamus metus dolor, faucibus ac rutrum vitae, interdum eget metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum lacinia enim at dolor molestie, eget lobortis augue iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
         // Footer
-        footer.footer.bg-light
-            .container
-                .row
-                    .col-lg-6.h-100.text-center.text-lg-start.my-auto
-                        ul.list-inline.mb-2
-                            li.list-inline-item
-                                a(href='#!') About
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Contact
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Terms of Use
-                            li.list-inline-item ⋅
-                            li.list-inline-item
-                                a(href='#!') Privacy Policy
-                        p.text-muted.small.mb-4.mb-lg-0 &copy; Your Website 2021. All Rights Reserved.
-                    .col-lg-6.h-100.text-center.text-lg-end.my-auto
-                        ul.list-inline.mb-0
-                            li.list-inline-item.me-4
-                                a(href='#!')
-                                    i.bi-facebook.fs-3
-                            li.list-inline-item.me-4
-                                a(href='#!')
-                                    i.bi-twitter.fs-3
-                            li.list-inline-item
-                                a(href='#!')
-                                    i.bi-instagram.fs-3
+        footer.footer.bg-primary.text-white
+                .container
+                    .d-md-flex.justify-content-between.mb-0
+                        p.fw-bold Aenean Vitae OÜ
+                        p Reg. kood 12345678
+                        p Harju maakond, Saue vald, Laagri alevik, Kännu 2, 76401
+                        a.ms-1(href='mailto:info@aeneanvitae.ee') info@aeneanvitae.ee
+
+                //- .row
+                //-     .col-lg-6.h-100.text-center.text-lg-start.my-auto
+                //-         ul.list-inline.mb-2
+                //-             li.list-inline-item
+                //-                 a(href='#!') About
+                //-             li.list-inline-item ⋅
+                //-             li.list-inline-item
+                //-                 a(href='#!') Contact
+                //-             li.list-inline-item ⋅
+                //-             li.list-inline-item
+                //-                 a(href='#!') Terms of Use
+                //-             li.list-inline-item ⋅
+                //-             li.list-inline-item
+                //-                 a(href='#!') Privacy Policy
+                //-         p.text-muted.small.mb-4.mb-lg-0 &copy; Your Website 2021. All Rights Reserved.
+                //-     .col-lg-6.h-100.text-center.text-lg-end.my-auto
+                //-         ul.list-inline.mb-0
+                //-             li.list-inline-item.me-4
+                //-                 a(href='#!')
+                //-                     i.bi-facebook.fs-3
+                //-             li.list-inline-item.me-4
+                //-                 a(href='#!')
+                //-                     i.bi-twitter.fs-3
+                //-             li.list-inline-item
+                //-                 a(href='#!')
+                //-                     i.bi-instagram.fs-3
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js')
