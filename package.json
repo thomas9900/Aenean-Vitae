@@ -36,6 +36,7 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-landing-page.git"
     },
     "dependencies": {
+        "axios": "^0.21.1",
         "bootstrap": "5.0.1"
     },
     "devDependencies": {

@@ -19,6 +19,20 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
+                <section class="text-end">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-cart"></i></button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body"><div class="cart"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
@@ -46,51 +60,51 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 product">
                             <div class="features-icons-icon d-flex"><i class="fas fa-cubes m-auto text-primary"></i></div>
-                            <a class="h5" href="#">Pakett 1</a>
+                            <a class="h5 product__name" href="#">Pakett 1</a>
                             <p class="my-2">
                                 Integer faucibus blandit eros, id
                                 <br />
                                 iaculis erat
                             </p>
-                            <h3 class="text-primary py-2">99 €</h3>
-                            <div class="btn btn-primary btn-sm">
+                            <h3 class="text-primary py-2 product__price">99 €</h3>
+                            <button class="btn btn-primary btn-sm" data-action="ADD_TO_CART">
                                 <i class="fas fa-cart-plus"></i>
                                 Lisa ostukorvi
-                            </div>
+                            </button>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 product">
                             <div class="features-icons-icon d-flex"><i class="fas fa-store m-auto text-primary"></i></div>
-                            <a class="h5" href="#">Pakett 2</a>
+                            <a class="h5 product__name" href="#">Pakett 2</a>
                             <p class="my-2">
                                 Orci varius natoque penatibus
                                 <br />
                                 et magnis dis parturient montes
                             </p>
-                            <h3 class="text-primary py-2">129 €</h3>
-                            <div class="btn btn-primary btn-sm">
+                            <h3 class="text-primary py-2 product__price">129 €</h3>
+                            <button class="btn btn-primary btn-sm" data-action="ADD_TO_CART">
                                 <i class="fas fa-cart-plus"></i>
                                 Lisa ostukorvi
-                            </div>
+                            </button>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3 product">
                             <div class="features-icons-icon d-flex"><i class="fas fa-globe-africa m-auto text-primary"></i></div>
-                            <a class="h5" href="#">Pakett 3</a>
+                            <a class="h5 product__name" href="#">Pakett 3</a>
                             <p class="my-2">
                                 Vivamus vestibulum lacus sit
                                 <br />
                                 amet mi pulvinar ornare
                             </p>
-                            <h3 class="text-primary py-2">199 €</h3>
-                            <div class="btn btn-primary btn-sm">
+                            <h3 class="text-primary py-2 product__price">199 €</h3>
+                            <button class="btn btn-primary btn-sm" data-action="ADD_TO_CART">
                                 <i class="fas fa-cart-plus"></i>
                                 Lisa ostukorvi
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>

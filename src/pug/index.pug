@@ -26,48 +26,63 @@ html(lang='en')
         link(href='css/styles.css', rel='stylesheet')
 
     body
-
+        
         // Masthead
         header.masthead
             .container.position-relative
+                section.text-end
+                  button.btn.btn-light(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                    | #[i.fas.fa-shopping-cart]
+                  #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header
+                          h5#exampleModalLabel.modal-title Cart
+                          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                        .modal-body
+                          .cart
                 .row.justify-content-center
                     .col-xl-6
                         .text-center.text-white
+                            
+                              
                             // Page heading
                             i.fas.fa-university
                             h1.mb-5 Aenean Vitae
                             // Paragraph
                             
                             p.lead #[i.fas.fa-quote-left] Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Phasellus sagittis elit in leo iaculis <br/> euismod. Sed aliquam aliquet lectus, eget <br/>placerat est vestibulum eget.
-                            
+                        
+        
         // Icons Grid
         section.features-icons.text-center
             .container
                 .row
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3.product
                             .features-icons-icon.d-flex
                                 i.fas.fa-cubes.m-auto.text-primary
-                            a(href='#').h5 Pakett 1
+                            a(href='#').h5.product__name Pakett 1
                             p.my-2 Integer faucibus blandit eros, id <br/> iaculis erat
-                            h3.text-primary.py-2 99 €
-                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
+                            h3.text-primary.py-2.product__price 99 €
+                            button.btn.btn-primary.btn-sm(data-action='ADD_TO_CART') #[i.fas.fa-cart-plus] Lisa ostukorvi
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3.product
                             .features-icons-icon.d-flex
                                 i.fas.fa-store.m-auto.text-primary
-                            a(href='#').h5 Pakett 2
+                            a(href='#').h5.product__name Pakett 2
                             p.my-2 Orci varius natoque penatibus <br/> et magnis dis parturient montes
-                            h3.text-primary.py-2 129 €
-                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
+                            h3.text-primary.py-2.product__price 129 €
+                            button.btn.btn-primary.btn-sm(data-action='ADD_TO_CART') #[i.fas.fa-cart-plus] Lisa ostukorvi
                     .col-lg-4
-                        .features-icons-item.mx-auto.mb-0.mb-lg-3
+                        .features-icons-item.mx-auto.mb-0.mb-lg-3.product
                             .features-icons-icon.d-flex
                                 i.fas.fa-globe-africa.m-auto.text-primary
-                            a(href='#').h5 Pakett 3
+                            a(href='#').h5.product__name Pakett 3
                             p.my-2 Vivamus vestibulum lacus sit <br/> amet mi pulvinar ornare
-                            h3.text-primary.py-2 199 €
-                            .btn.btn-primary.btn-sm #[i.fas.fa-cart-plus] Lisa ostukorvi
+                            h3.text-primary.py-2.product__price 199 €
+                            button.btn.btn-primary.btn-sm(data-action='ADD_TO_CART') #[i.fas.fa-cart-plus] Lisa ostukorvi
+
 
         // Paragraph Section
         section.paragraphs
@@ -84,32 +99,7 @@ html(lang='en')
                         p Harju maakond, Saue vald, Laagri alevik, Kännu 2, 76401
                         a.ms-1(href='mailto:info@aeneanvitae.ee') info@aeneanvitae.ee
 
-                //- .row
-                //-     .col-lg-6.h-100.text-center.text-lg-start.my-auto
-                //-         ul.list-inline.mb-2
-                //-             li.list-inline-item
-                //-                 a(href='#!') About
-                //-             li.list-inline-item ⋅
-                //-             li.list-inline-item
-                //-                 a(href='#!') Contact
-                //-             li.list-inline-item ⋅
-                //-             li.list-inline-item
-                //-                 a(href='#!') Terms of Use
-                //-             li.list-inline-item ⋅
-                //-             li.list-inline-item
-                //-                 a(href='#!') Privacy Policy
-                //-         p.text-muted.small.mb-4.mb-lg-0 &copy; Your Website 2021. All Rights Reserved.
-                //-     .col-lg-6.h-100.text-center.text-lg-end.my-auto
-                //-         ul.list-inline.mb-0
-                //-             li.list-inline-item.me-4
-                //-                 a(href='#!')
-                //-                     i.bi-facebook.fs-3
-                //-             li.list-inline-item.me-4
-                //-                 a(href='#!')
-                //-                     i.bi-twitter.fs-3
-                //-             li.list-inline-item
-                //-                 a(href='#!')
-                //-                     i.bi-instagram.fs-3
+
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js')
